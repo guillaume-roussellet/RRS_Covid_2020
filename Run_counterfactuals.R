@@ -502,7 +502,7 @@ res_strict_all_cf_perstate        <- rowSums(var_here[(5 * nb_states + 1):(6 * n
 res_strict_all_baseline_perstate  <- rowSums(var_here[1:nb_states,])
 res_strict_all_country            <- round(sum(res_strict_all_cf_perstate) - sum(res_strict_all_baseline_perstate))
 res_strict_all_perstate           <- round(res_strict_all_cf_perstate - res_strict_all_baseline_perstate)
-names(res_strict_all_perstate)    <- names(res_strict_all_baseline_perstate) = states_here
+names(res_strict_all_perstate)    <- names(res_strict_all_baseline_perstate) <- states_here
 res_strict_all_perstate_rel       <- res_strict_all_perstate[states_here]/res_strict_all_baseline_perstate[states_here]
 
 write.csv(res_strict_all_perstate, "cf_joint_abs_All_strict.csv")
@@ -515,7 +515,7 @@ res_strict_stayathome_cf_perstate       <- rowSums(var_here[(5 * nb_states + 1):
 res_strict_stayathome_baseline_perstate <- rowSums(var_here[1:nb_states,])
 res_strict_stayathome_country           <- round(sum(res_strict_stayathome_cf_perstate) - sum(res_strict_stayathome_baseline_perstate))
 res_strict_stayathome_perstate          <- round(res_strict_stayathome_cf_perstate - res_strict_stayathome_baseline_perstate)
-names(res_strict_stayathome_perstate)   <- names(res_strict_stayathome_baseline_perstate) = states_here
+names(res_strict_stayathome_perstate)   <- names(res_strict_stayathome_baseline_perstate) <- states_here
 res_strict_stayathome_perstate_rel      <- res_strict_stayathome_perstate[states_here]/res_strict_stayathome_baseline_perstate[states_here]
 
 write.csv(res_strict_stayathome_perstate, "cf_joint_abs_StayAtHome_strict.csv")
@@ -528,7 +528,7 @@ res_strict_travel_cf_perstate           <- rowSums(var_here[(5 * nb_states + 1):
 res_strict_travel_baseline_perstate     <- rowSums(var_here[1:nb_states,])
 res_strict_travel_country               <- round(sum(res_strict_travel_cf_perstate) - sum(res_strict_travel_baseline_perstate))
 res_strict_travel_perstate              <- round(res_strict_travel_cf_perstate - res_strict_travel_baseline_perstate)
-names(res_strict_travel_perstate)       <- names(res_strict_travel_baseline_perstate) = states_here
+names(res_strict_travel_perstate)       <- names(res_strict_travel_baseline_perstate) <- states_here
 res_strict_travel_perstate_rel          <- res_strict_travel_perstate[states_here]/res_strict_travel_baseline_perstate[states_here]
 
 write.csv(res_strict_travel_perstate, "cf_joint_abs_TravelBan_strict.csv")
@@ -542,7 +542,7 @@ res_strict_masks_baseline_perstate      <- rowSums(var_here[1:nb_states,])
 res_strict_masks_country                <- round(sum(res_strict_masks_cf_perstate) - sum(res_strict_masks_baseline_perstate))
 res_strict_masks_perstate               <- round(res_strict_masks_cf_perstate - res_strict_masks_baseline_perstate)
 res_strict_masks_perstate[res_strict_masks_perstate > 0] <- -0.01
-names(res_strict_masks_perstate)        <- names(res_strict_masks_baseline_perstate) = states_here
+names(res_strict_masks_perstate)        <- names(res_strict_masks_baseline_perstate) <- states_here
 res_strict_masks_perstate_rel           <- res_strict_masks_perstate[states_here]/res_strict_masks_baseline_perstate[states_here]
 
 write.csv(res_strict_masks_perstate, "cf_joint_abs_Masks_strict.csv")
@@ -556,7 +556,7 @@ res_loose_all_cf_perstate         <- rowSums(var_here[(5 * nb_states + 1):(6 * n
 res_loose_all_baseline_perstate   <- rowSums(var_here[1:nb_states,])
 res_loose_all_country             <- round(sum(res_loose_all_cf_perstate) - sum(res_loose_all_baseline_perstate))
 res_loose_all_perstate            <- round(res_loose_all_cf_perstate - res_loose_all_baseline_perstate)
-names(res_loose_all_perstate)     <- names(res_loose_all_baseline_perstate) = states_here
+names(res_loose_all_perstate)     <- names(res_loose_all_baseline_perstate) <- states_here
 res_loose_all_perstate_rel        <- res_loose_all_perstate[states_here]/res_loose_all_baseline_perstate[states_here]
 
 write.csv(res_loose_all_perstate, "cf_joint_abs_All_loose.csv")
@@ -569,7 +569,7 @@ res_loose_stayathome_cf_perstate        <- rowSums(var_here[(5 * nb_states + 1):
 res_loose_stayathome_baseline_perstate  <- rowSums(var_here[1:nb_states,])
 res_loose_stayathome_country            <- round(sum(res_loose_stayathome_cf_perstate) - sum(res_loose_stayathome_baseline_perstate))
 res_loose_stayathome_perstate           <- round(res_loose_stayathome_cf_perstate - res_loose_stayathome_baseline_perstate)
-names(res_loose_stayathome_perstate)    <- names(res_loose_stayathome_baseline_perstate) = states_here
+names(res_loose_stayathome_perstate)    <- names(res_loose_stayathome_baseline_perstate) <- states_here
 res_loose_stayathome_perstate_rel       <- res_loose_stayathome_perstate[states_here]/res_loose_stayathome_baseline_perstate[states_here]
 
 write.csv(res_loose_stayathome_perstate, "cf_joint_abs_StayAtHome_loose.csv")
@@ -582,7 +582,7 @@ res_loose_travel_cf_perstate        <- rowSums(var_here[(5 * nb_states + 1):(6 *
 res_loose_travel_baseline_perstate  <- rowSums(var_here[1:nb_states,])
 res_loose_travel_country            <- round(sum(res_loose_travel_cf_perstate) - sum(res_loose_travel_baseline_perstate))
 res_loose_travel_perstate           <- round(res_loose_travel_cf_perstate - res_loose_travel_baseline_perstate)
-names(res_loose_travel_perstate)    <- names(res_loose_travel_baseline_perstate) = states_here
+names(res_loose_travel_perstate)    <- names(res_loose_travel_baseline_perstate) <- states_here
 res_loose_travel_perstate_rel       <- res_loose_travel_perstate[states_here]/res_loose_travel_baseline_perstate[states_here]
 
 write.csv(res_loose_travel_perstate, "cf_joint_abs_Travelan_loose.csv")
@@ -595,7 +595,7 @@ res_loose_masks_cf_perstate         <- rowSums(var_here[(5 * nb_states + 1):(6 *
 res_loose_masks_baseline_perstate   <- rowSums(var_here[1:nb_states,])
 res_loose_masks_country             <- round(sum(res_loose_masks_cf_perstate) - sum(res_loose_masks_baseline_perstate))
 res_loose_masks_perstate            <- round(res_loose_masks_cf_perstate - res_loose_masks_baseline_perstate)
-names(res_loose_masks_perstate)     <- names(res_loose_masks_baseline_perstate) = states_here
+names(res_loose_masks_perstate)     <- names(res_loose_masks_baseline_perstate) <- states_here
 res_loose_masks_perstate_rel        <- res_loose_masks_perstate[states_here]/res_loose_masks_baseline_perstate[states_here]
 
 write.csv(res_loose_masks_perstate, "cf_joint_abs_Masks_loose.csv")
@@ -1251,7 +1251,7 @@ stricter_masks_vector <- apply(Dummy_masks,1,min)
 
 print("Start state-by-state counterfactuals")
 
-tempforeach = foreach(i=1:nb_states, .errorhandling = 'stop') %dopar% {
+tempforeach <- foreach(i=1:nb_states, .errorhandling = 'stop') %do% {
   
   # Define dummies
   #---------------
@@ -1450,7 +1450,15 @@ Smoothed_PerState_Loose_TravelBan     <- lapply(tempforeach, "[[", 7)
 Smoothed_PerState_Loose_Masks         <- lapply(tempforeach, "[[", 8)
 
 
-names(Smoothed_PerState_Strict_All)   <- names(Smoothed_PerState_Strict_StayAtHome) = names(Smoothed_PerState_Strict_TravelBan) = names(Smoothed_PerState_Strict_Masks) = names(Smoothed_PerState_Loose_All) = names(Smoothed_PerState_Loose_StayAtHome) = names(Smoothed_PerState_Loose_TravelBan) = names(Smoothed_PerState_Loose_Masks) = vector.of.states
+names(Smoothed_PerState_Strict_All)           <- 
+  names(Smoothed_PerState_Strict_StayAtHome)  <- 
+  names(Smoothed_PerState_Strict_TravelBan)   <- 
+  names(Smoothed_PerState_Strict_Masks)       <- 
+  names(Smoothed_PerState_Loose_All)          <- 
+  names(Smoothed_PerState_Loose_StayAtHome)   <- 
+  names(Smoothed_PerState_Loose_TravelBan)    <- 
+  names(Smoothed_PerState_Loose_Masks)        <- 
+  vector.of.states
 
 ordered.state.names <- statenames_here <- 
   c("Alaska", "Alabama", "Arkansas", "Arizona", "California", 
@@ -2181,34 +2189,6 @@ barplot(Plot2.perstate$x,
         names.arg = vector.of.states[Plot2.perstate$ix], xaxt = "n", yaxt = "n", 
         cex.names = .5, beside = T, horiz = T,
         col = c("#92000054"), border = c("#920000"), add = T)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
